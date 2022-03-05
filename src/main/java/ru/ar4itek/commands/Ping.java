@@ -3,6 +3,7 @@ package ru.ar4itek.commands;
 import net.dv8tion.jda.api.events.message.MessageReceivedEvent;
 import java.util.List;
 
+/* author: ar4itek.ru */
 public class Ping implements ICommand {
 
     @Override

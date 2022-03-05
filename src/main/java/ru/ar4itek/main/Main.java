@@ -8,6 +8,7 @@ import ru.ar4itek.events.OnMessageReceived;
 
 import javax.security.auth.login.LoginException;
 
+/* author: ar4itek.ru */
 public class Main {
 
     protected static JDA jda;
@@ -22,8 +23,7 @@ public class Main {
     }
 
     protected static void login() throws LoginException, InterruptedException {
-        jda = JDABuilder.createDefault(TOKEN, GatewayIntent.GUILD_MESSAGES, GatewayIntent.DIRECT_MESSAGES, GatewayIntent.GUILD_MEMBERS,
-                        GatewayIntent.GUILD_VOICE_STATES, GatewayIntent.GUILD_MESSAGE_REACTIONS, GatewayIntent.DIRECT_MESSAGE_REACTIONS)
+        jda = JDABuilder.createDefault(TOKEN, GatewayIntent.GUILD_MESSAGES)
                 .addEventListeners(new OnMessageReceived())
                 .setActivity(Activity.competing(Config.get("prefix") + "help"))
                 .setAutoReconnect(true)

@@ -1,6 +1,7 @@
 package ru.ar4itek.main;
 
 import net.dv8tion.jda.api.events.message.MessageReceivedEvent;
+import ru.ar4itek.commands.Help;
 import ru.ar4itek.commands.ICommand;
 import ru.ar4itek.commands.Ping;
 import java.util.ArrayList;
@@ -8,12 +9,14 @@ import java.util.Arrays;
 import java.util.List;
 import java.util.regex.Pattern;
 
+/* author: ar4itek.ru */
 public class CommandManager {
 
     private final List<ICommand> commands = new ArrayList<>();
 
     public CommandManager() {
         addCommand(new Ping());
+        addCommand(new Help(this));
     }
 
     private void addCommand(ICommand cmd) {

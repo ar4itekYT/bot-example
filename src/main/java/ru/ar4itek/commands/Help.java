@@ -4,16 +4,10 @@ import net.dv8tion.jda.api.entities.TextChannel;
 import net.dv8tion.jda.api.events.message.MessageReceivedEvent;
 import ru.ar4itek.main.CommandManager;
 import ru.ar4itek.main.Config;
-
 import java.util.List;
 
-public class Help implements ICommand {
-
-    private final CommandManager manager;
-
-    public Help(CommandManager manager) {
-        this.manager = manager;
-    }
+/* author: ar4itek.ru */
+public record Help(CommandManager manager) implements ICommand {
 
     @Override
     public void handle(List<String> args, MessageReceivedEvent ctx) {
